@@ -356,6 +356,42 @@ footer {
 .hero-content p {
     font-size: 1.2em;
 }
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+.center-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.center-link:hover {
+    background-color: #0056b3;
+}
+
 
 .center-link {
     display: inline-block;
