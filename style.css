@@ -7,10 +7,13 @@ body, h1, p, ul {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background: #000;
@@ -25,6 +28,7 @@ header .logo img {
 header nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -43,6 +47,7 @@ header .icons i {
 
 .hero {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 40px 20px;
@@ -52,6 +57,7 @@ header .icons i {
 .hero-content {
     max-width: 50%;
     text-align: center;
+    margin: 10px;
 }
 
 .hero-content img {
@@ -72,6 +78,7 @@ header .icons i {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    margin: 10px;
 }
 
 footer {
@@ -79,15 +86,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-}
-
-.about-content h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .about {
@@ -96,14 +95,10 @@ footer {
     background: #f1f1f1;
 }
 
-
-
 .about-image {
     margin-bottom: 20px;
-  margin-top: 20px;
+    margin-top: 20px;
 }
-
-   
 
 .about-image img {
     max-width: 100%;
@@ -116,7 +111,6 @@ footer {
     margin: 0 auto;
     text-align: left;
 }
-
 
 .about-content h2 {
     font-size: 2em;
@@ -190,6 +184,7 @@ footer {
 
 .contact-us {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     padding: 40px 20px;
@@ -209,6 +204,7 @@ footer {
 .contact-image {
     flex: 1;
     text-align: center;
+    margin: 10px;
 }
 
 .contact-image img {
@@ -276,10 +272,10 @@ footer {
 
 .product-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .product-item {
@@ -336,76 +332,76 @@ footer {
     margin-top: 10px;
     max-width: 600px;
 }
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.kickstarter-section {
     text-align: center;
+    padding: 40px 20px;
+    background: #f9f9f9;
 }
 
-.hero-content img {
-    max-width: 200px;
-    margin-bottom: 20px;
-}
-
-.hero-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-}
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-content img {
-    max-width: 200px;
-    margin-bottom: 20px;
-}
-
-.hero-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-}
-
-.center-link {
-    display: inline-block;
+.kickstarter-section button {
     padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
+    font-size: 1.2em;
+    background-color: #FF5700;
+    color: white;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     margin-top: 20px;
-    text-align: center;
 }
 
-.center-link:hover {
-    background-color: #0056b3;
+.kickstarter-section button:hover {
+    background-color: #E64A19;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero, .contact-us {
+        flex-direction: column;
+    }
 
-.center-link {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
+    .hero-content, .hero-image, .contact-form, .contact-image {
+        max-width: 100%;
+    }
+
+    .product-card {
+        width: 45%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.center-link:hover {
-    background-color: #0056b3;
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5em;
+    }
+
+    .about-content h2 {
+        font-size: 1.5em;
+    }
+
+    .about-content h3 {
+        font-size: 1.2em;
+    }
 }
 
 .kickstarter-section {
@@ -437,4 +433,3 @@ footer {
 .kickstarter-button:hover {
     background-color: #0056b3;
 }
-
